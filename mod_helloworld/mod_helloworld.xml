@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Hello World Module</name>
+    <author>Drew Jaqua</author>
+    <version>1.0.0</version>
+    <description>Template for a Joomla module</description>
+    <files>
+        <!-- <filename>mod_helloworld.xml</filename> -->
+        <filename module="mod_helloworld">mod_helloworld.php</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+                <!-- https://docs.joomla.org/Special:MyLanguage/J3.x:Creating_a_simple_module/Adding_Form_Fields -->
+                <!-- https://docs.joomla.org/Special:MyLanguage/Standard_form_field_types -->
+
+                <field
+                       name="greeting"
+                       type="text"
+                       label="Custom Greeting"
+                       default="Hello, world!"
+                       />
+
+            </fieldset>
+
+        </fields>
+    </config>
+
+</extension>
