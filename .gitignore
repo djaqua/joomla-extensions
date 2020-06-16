@@ -1,3 +1,4 @@
+*.zip
 /.htaccess
 /administrator/cache/*
 /administrator/components/com_actionlogs/*
@@ -36,7 +37,7 @@
 /administrator/includes/*
 /administrator/index.php
 /administrator/language/en-GB/en-GB.com_actionlogs.ini
-/administrator/language/en-GB/en-GB.com_actionlogs.sys.ini
+administrator/language/en-GB/en-GB.com_actionlogs.sys.ini
 /administrator/language/en-GB/en-GB.com_admin.ini
 /administrator/language/en-GB/en-GB.com_admin.sys.ini
 /administrator/language/en-GB/en-GB.com_ajax.ini
