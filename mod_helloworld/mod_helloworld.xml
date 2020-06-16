@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- https://docs.joomla.org/Special:MyLanguage/J3.x:Creating_a_simple_module/Introduction -->
+
 <extension type="module" version="3.1.0" client="site" method="upgrade">
     <name>Hello World Module</name>
     <author>Drew Jaqua</author>
     <version>1.0.0</version>
     <description>Template for a Joomla module</description>
+
+    <scriptfile>script.php</scriptfile>
+
     <files>
-        <!-- <filename>mod_helloworld.xml</filename> -->
+        <filename>mod_helloworld.xml</filename>
         <filename module="mod_helloworld">mod_helloworld.php</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>sql</folder>
     </files>
+
+
     <config>
         <fields name="params">
             <fieldset name="basic">
 
-                <!-- https://docs.joomla.org/Special:MyLanguage/J3.x:Creating_a_simple_module/Adding_Form_Fields -->
                 <!-- https://docs.joomla.org/Special:MyLanguage/Standard_form_field_types -->
 
                 <field
@@ -26,5 +36,23 @@
 
         </fields>
     </config>
+
+    <install>
+         <sql>
+             <file driver="mysql" charset="utf8">sql/mysql/install.utf8.sql</file>
+         </sql>
+    </install>
+
+    <uninstall>
+         <sql>
+             <file driver="mysql" charset="utf8">sql/mysql/uninstall.utf8.sql</file>
+         </sql>
+    </uninstall>
+
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/mysql/updates</schemapath>
+        </schemas>
+    </update>
 
 </extension>

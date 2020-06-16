@@ -1,6 +1,6 @@
 <?php
 /**
- * Hello World Module entry point
+ * Helper class for Hello World Module
  *
  * @package    Jaqua.Templates
  * @subpackage Modules
@@ -11,12 +11,17 @@
  * is derivative of works licensed under the GNU General Public License or
  * other free or open source software licenses.
  */
-
-// no direct access
-defined('_JEXEC') or die;
-
-// include the syndicate functions only once
-require_once dirname(__FILE__) . '/helper.php';
-
-$message = modHelloWorldHelper::getMessage($params);
-require JModuleHelper::getLayoutPath('mod_helloworld');
+class ModHelloWorldHelper
+{
+    /**
+     * Retrieves the hello message
+     *
+     * @param   array  $params An object containing the module parameters
+     *
+     * @access public
+     */
+    public static function getMessage($params)
+    {
+        return $params->get('greeting');
+    }
+}
