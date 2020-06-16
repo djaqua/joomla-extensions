@@ -19,4 +19,7 @@ defined('_JEXEC') or die;
 require_once dirname(__FILE__) . '/helper.php';
 
 $message = modHelloWorldHelper::getMessage($params);
-require JModuleHelper::getLayoutPath('mod_helloworld');
+
+// $response = modHelloWorldHelper::doGet('http://www.example.com/api?foo=bar', $params);
+
+require JModuleHelper::getLayoutPath('mod_helloworld'); //

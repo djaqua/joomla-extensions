@@ -32,6 +32,34 @@
                        default="Hello, world!"
                        />
 
+                <field
+                    name="curl_follow_redirects"
+                    type="combo"
+                    label="Follow redirects"
+                    size="1">
+                    <option value="0">false</option>
+                    <option value="1">true</option>
+                </field>
+
+                <field
+                    name="curl_ssl_verify_peer"
+                    type="combo"
+                    label="SSL Verify Peer"
+                    size="1">
+                    <option value="0">false</option>
+                    <option value="1">true</option>
+                </field>
+
+                <field
+                    name="curl_ssl_verify_host"
+                    type="integer"
+                    default="2"
+                    label="SSL Verify Host"
+                    description="2 for production, 1 to debug, 0 to develop"
+                    first="0"
+                    last="2"
+                    step="1" />
+
             </fieldset>
 
         </fields>
