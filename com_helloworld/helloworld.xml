@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
     Based on https://docs.joomla.org/J3.x:Developing_an_MVC_Component/Developing_a_Basic_Component
-    
+
     Make this component viewable to mere mortals by adding as a menu item:
     1) Menu => <existing menu> => Add New Menu Item
     2) Menu Type => [Select] => Hello World!
@@ -36,6 +36,7 @@
 		<filename>helloworld.php</filename>
         <filename>controller.php</filename>
 		<folder>views</folder>
+		<folder>models</folder>
 	</files>
 
 	<administration>

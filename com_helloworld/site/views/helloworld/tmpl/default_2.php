@@ -10,4 +10,4 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 ?>
-<h1><?php echo $this->msg; ?>(displayed in site/views/helloworld/tmpl/default2.php)</h1>
+<h1><?php echo $this->msg; ?>(displayed in site/views/helloworld/tmpl/default_2.php)</h1>

@@ -25,10 +25,21 @@ class HelloWorldViewHelloWorld extends JViewLegacy
 	 * @return  void
 	 */
 	function display($tpl = null)  // uses 'tmpl/default.php'
-	// function display($tpl = '2')    // uses 'tmpl/default_2.php'
+	// function display($tpl = '2')    // NOTE uses 'tmpl/default_2.php'
 	{
 		// Assign data to the view (tmpl/default.php)
-		$this->msg = 'Hello World (defined in view.html.php)';
+		// $this->msg = 'Hello World (defined in view.html.php)';
+
+        // get value from site/models/helloworld.php
+        $this->msg = $this->get('Msg');
+
+		// Check for errors.
+		if (count($errors = $this->get('Errors')))
+		{
+			JLog::add(implode('<br />', $errors), JLog::WARNING, 'jerror');
+
+			return false;
+		}
 
 		// Display the view
 		parent::display($tpl);
