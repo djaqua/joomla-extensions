@@ -5,15 +5,6 @@
 	</layout>
     <fields name="request" addfieldpath="/administrator/components/com_helloworld/models/fields">
 		<fieldset name="request">
-			<!-- <field
-					name="id"
-					type="list"
-					label="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_LABEL"
-					description="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_DESC"
-					default="1">
-                                <option value="1">Hello World!</option>
-                                <option value="2">Good bye World!</option>
-                        </field> -->
 
 			<field
 					name="id"
@@ -21,6 +12,8 @@
 					label="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_LABEL"
 					description="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_DESC"
 					/>
+
+            <!-- https://docs.joomla.org/Special:MyLanguage/Standard_form_field_types -->
 		</fieldset>
 	</fields>
 </metadata>
